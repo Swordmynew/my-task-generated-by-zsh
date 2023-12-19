@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>协议统计图</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div id="my-chart_1" style="width: 450px; height: 300px;position: absolute; top: 400px; left: 50px;"></div>
+    <script>
+        var chart_options = {{ chart_options1|safe }};
+        var myChart = echarts.init(document.getElementById('my-chart_1'));
+        myChart.setOption(chart_options);
+    </script>
+    <div id="my-chart_2" style="width: 450px; height: 300px;position: absolute;  left: 600px;"></div>
+    <script>
+        var chart_options = {{ chart_options2|safe }};
+        var myChart = echarts.init(document.getElementById('my-chart_2'));
+        myChart.setOption(chart_options);
+    </script>
+        <div id="my-chart_3" style="width: 450px; height: 300px;"></div>
+    <script>
+        var chart_options = {{ chart_options3|safe }};
+        var myChart = echarts.init(document.getElementById('my-chart_3'));
+        myChart.setOption(chart_options);
+    </script>
+    <div id="my-chart_4" style="width: 450px; height: 300px; left: 600px;"></div>
+    <script>
+        var chart_options = {{ chart_options4|safe }};
+        var myChart = echarts.init(document.getElementById('my-chart_4'));
+        myChart.setOption(chart_options);
+    </script>
+</body>
+</html>
