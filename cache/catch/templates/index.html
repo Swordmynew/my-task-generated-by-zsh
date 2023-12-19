@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+</head>
+<body>
+    <h1>抓包展示</h1>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>版本             </tr>
+                <tr>ihl              </tr>
+                <tr>tos              </tr>
+                <tr>总长度              </tr>
+                <tr>id              </tr>
+                <tr>frag              </tr>
+                <tr>ttl              </tr>
+                <tr>协议              </tr>
+                <tr>chksum              </tr>
+                <tr>源              </tr>
+                <tr>目标源              </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>{{ item.version }}</td>
+                    <td>{{ item.ihl }}</td>
+                    <td>{{ item.tos }}}</td>
+                    <td>{{ item.len }}}</td>
+                    <td>{{ item.uid }}}</td>
+                    <td>{{ item.frag }}}</td>
+                    <td>{{ item.ttl }}}</td>
+                    <td>{{ item.proto }}}</td>
+                    <td>{{ item.chksum }}}</td>
+                    <td>{{ item.src }}}</td>
+                    <td>{{ item.dst }}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</body>
+</html>
